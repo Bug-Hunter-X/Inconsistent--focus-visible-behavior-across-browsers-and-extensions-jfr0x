@@ -1,0 +1,14 @@
+The following CSS code provides a potential solution by adding a fallback using the `:focus` pseudo-class to ensure consistent styling even if `:focus-visible` does not function correctly in all scenarios:
+
+```css
+.my-element:focus-visible {
+  outline: 2px solid blue;
+}
+
+/* Fallback for cases where :focus-visible doesn't work as expected */
+.my-element:focus {
+  outline: 1px solid lightblue; /* Less prominent outline */
+}
+```
+
+This approach applies a more subtle outline using `:focus` when `:focus-visible` might not be triggered. This ensures visual feedback remains for users while preserving a more subtle styling in cases where mouse clicks have brought an element into focus.
