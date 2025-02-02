@@ -1,0 +1,9 @@
+The following CSS code snippet exhibits an uncommon error related to the usage of the `:focus-visible` pseudo-class and its interaction with certain browser extensions or accessibility settings:
+
+```css
+.my-element:focus-visible {
+  outline: 2px solid blue;
+}
+```
+
+The issue arises when a browser extension or accessibility setting modifies the default focus behavior.  In some scenarios, `:focus-visible` might not trigger the expected styling, even when the element is in focus. This happens because `:focus-visible` is designed to only apply styles when the focus is programmatically initiated (e.g., using Tab key), not when it's triggered by mouse clicks or other means.
